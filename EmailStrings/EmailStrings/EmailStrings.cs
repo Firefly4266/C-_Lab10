@@ -9,12 +9,12 @@ public class EmailStringe
         string[] elements;
         Console.WriteLine("Enter a string, empty string to end");
         string email = iw.getString("email: ");
-        while (! email.Equals(""))
+        while (!email.Equals(""))
         {
-            //elements = email.Split(spaces);
-            //foreach (string ele in elements)         
-            //    Console.WriteLine(ele);
-            //    email = iw.getString("email: ");
+            elements = email.Split(spaces);
+            foreach (string ele in elements)
+                Console.WriteLine(ele);
+            email = iw.getString("email: ");
             int index = email.IndexOf('@', 0);
             if (index != -1)
             {
